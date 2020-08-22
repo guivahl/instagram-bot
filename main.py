@@ -20,7 +20,7 @@ user_nonfollowers=session.pick_nonfollowers(username=config.username, live_match
 filtered_user_nonfollowers=list(set(user_nonfollowers) - set(config.white_list))
 
 session.follow_user_followers(
-    config.users_followers_to_follow,
+    config.users_to_follow,
     amount=5,
     randomize=False,
     sleep_delay=constants.ONE_MINUTE_TO_SECONDS
